@@ -1,16 +1,14 @@
-public class Phone {
+public abstract class Phone {
 
-     int  number = 49876;
+    private int  number;
     private double weight;
-     String model;
+    private String model;
 
     // методы
 
-    void print(){
-        System.out.printf("Model: %s number: %d  weight: %f  \n", model, number, weight);
-    }
+  public abstract void info(String model); // System.out.printf("Model: %s number: %d  weight: %f  \n", model, number, weight);
 
-   String receiveCall(String name){
+    String receiveCall(String name){
        System.out.printf("Имя: %s ", name);
         return name;
     }
@@ -44,4 +42,6 @@ public class Phone {
         this.number = number;
         this.weight = weight;
     }
+
+    abstract void info();
 }
